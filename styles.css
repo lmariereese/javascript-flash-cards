@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F4F4F4;
+  color: #4e616c;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color: #0c1e29;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+.main-header {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+.main-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.c-title {
+  margin: 5px 0 20px 0;
+  padding-left: 5px;
+}
+
+.code {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 10px 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #EEEEEE;
+  font-family: 'Consolas', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New';
+  font-size: 12px;
+}
+
+.example {
+  background-color: #EEEEEE;
+
+}
+
+.definition {
+  padding-left: 15px;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.flip-btn-div {
+  padding: 5px 20px 20px 20px;
+}
+
+.btn {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  outline: none;
+}
+
+.flip-btn {
+  padding: 3px 10px;
+}
+
+.flip-btn:hover {
+  color: #F4F4F4;
+  background-color: #4e616c;
+  border: 1px solid black;
+}
+
+.next-btn-div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0;
+}
+
+.next-btn {
+  padding: 3px 10px;
+}
