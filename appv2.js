@@ -72,23 +72,6 @@ const flashcards = [
     wasShown: false
   },
   {
-    cardTitle: `array.flat()`,
-    setup: [`const arr1 = [1, 2, [3, 4, [5, 6]]];`],
-    examples: [
-      {
-        call: `console.log(arr1.flat());`,
-        returns: `  //  [1, 2, 3, 4, [5, 6]]`
-      },
-      {
-        call: `console.log(arr1.flat(2));`,
-        returns: `  //  [1, 2, 3, 4, 5, 6]`
-      }
-    ],
-    definition: "The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. The depth level specifies how deep a nested array structure should be flattened. Defaults to 1. The flat method removes empty slots in arrays. ",
-    source: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat",
-    wasShown: false
-  },
-  {
     cardTitle: `array.concat()`,
     setup: [`const array1 = ['a', 'b', 'c'];`, `const array2 = ['d', 'e', 'f']`],
     examples: [
@@ -280,12 +263,17 @@ nextBtnDiv.addEventListener('click', (event) => {
   let codeDivToRemove = document.querySelector('.example-div');
   let block = setupToRemove.parentNode;
   let defToRemove = document.querySelector('.definition');
-  let parentBlock = defToRemove.parentNode;
-  flipBtn.textContent = "Flip";
-  flipBtn.classList.add('flip-btn', 'btn');
-  flipBtnDiv.append(flipBtn);
   block.removeChild(setupToRemove);
   block.removeChild(codeDivToRemove);
-  parentBlock.removeChild(defToRemove);
+
+  // if user previously clicked the flip button, we need to remove the definition, create a new flip button, and append it
+  if (defToRemove) {
+    let parentBlock = defToRemove.parentNode;
+    parentBlock.removeChild(defToRemove);
+    flipBtn.textContent = "Flip";
+    flipBtn.classList.add('flip-btn', 'btn');
+    flipBtnDiv.append(flipBtn);
+  }
+
   printCard(getRandomCard());
 });
